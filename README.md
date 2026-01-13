@@ -1,18 +1,18 @@
 # Flask User Authentication System
 
-A robust and clean user authentication system built using Python (Flask), HTML, CSS, and SQLite.  
-Designed to showcase a secure login flow with server-side validation and a minimalistic, user-friendly interface.
+A simple yet secure user authentication system built with Python (Flask), HTML, CSS, and SQLite.  
+This project demonstrates a clear login workflow with server-side validation and a minimal, user-friendly interface.
 
 ---
 
-## Key Features
+## Features
 
-- Secure user login via username and password  
-- Backend powered by Flask with efficient routing  
-- Lightweight SQLite database for user management  
-- Responsive, clean, and accessible login UI  
-- Clear feedback with flash messaging for authentication errors  
-- Modular codebase designed for easy maintenance and extension  
+- Username and password authentication  
+- Flask backend with clean, efficient routing  
+- Lightweight SQLite database for user storage  
+- Responsive and accessible login page  
+- Real-time feedback with flash messages  
+- Modular and maintainable codebase  
 
 ---
 
@@ -21,7 +21,7 @@ Designed to showcase a secure login flow with server-side validation and a minim
 - **Backend:** Python 3.x, Flask  
 - **Frontend:** HTML5, CSS3  
 - **Database:** SQLite  
-- **Development Tools:** Git, VS Code (recommended)  
+- **Tools:** Git, VS Code (recommended)  
 
 ---
 
@@ -29,13 +29,13 @@ Designed to showcase a secure login flow with server-side validation and a minim
 
 flask_user_auth/
 │
-├── app.py # Flask application source code
+├── app.py # Flask app source code
 ├── users.db # SQLite database file
 │
 ├── templates/ # HTML templates
 │ └── login.html
 │
-└── static/ # Static assets (CSS files)
+└── static/ # Static files
 └── style.css
 
 yaml
@@ -45,25 +45,27 @@ Copy code
 
 ## Prerequisites
 
-- Python 3.6 or higher installed  
+- Python 3.6 or newer  
 - Pip package manager  
-- Basic familiarity with terminal/command line  
+- Basic command line knowledge  
 
 ---
 
 ## Setup Instructions
 
-### 1. Clone the repository
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/your-username/flask_user_auth.git
 cd flask_user_auth
-2. Install dependencies
+Install dependencies
+
 bash
 Copy code
 pip install flask
-3. Initialize the database
-Run the following script once to create the users table and insert a default user:
+Initialize the database
+
+Create a file called init_db.py with this content:
 
 python
 Copy code
@@ -87,53 +89,52 @@ cursor.execute(
 
 conn.commit()
 conn.close()
-You can run this in a Python shell or save it as a script and execute it.
+Run the script:
 
-4. Run the Flask application
+bash
+Copy code
+python init_db.py
+Run the Flask app
+
 bash
 Copy code
 python app.py
-By default, the app will start on:
+Open your browser at:
 
 cpp
 Copy code
 http://127.0.0.1:5000
-Open this URL in your browser to access the login page.
-
 Usage
-Use the default credentials to log in:
+Log in with the default user:
 
 Username: admin
 
 Password: 1234
 
-On successful login, a personalized welcome message appears.
+A successful login shows a personalized welcome message.
 
-Invalid credentials display an error message.
+Incorrect login attempts display error messages.
 
-Security Considerations
-This project is intended for educational and demonstration purposes. Plaintext password storage is insecure and should never be used in production. For production readiness:
+Security Notice
+This project is for educational use only. Storing passwords in plaintext is unsafe and not recommended for production. For production systems, you should:
 
-Implement password hashing (e.g., werkzeug.security.generate_password_hash)
+Use password hashing (werkzeug.security.generate_password_hash)
 
-Use secure session management and cookies
+Employ secure session management
 
-Manage configuration and secrets via environment variables
+Use environment variables for sensitive config
 
-Deploy using HTTPS to encrypt traffic
+Deploy over HTTPS
 
-Roadmap for Improvements
-Implement user registration and password reset
+Future Improvements
+User registration and password recovery
 
-Add secure password hashing and salting
+Password hashing and salting
 
-Build logout and session expiration functionality
+Session expiration and logout
 
-Introduce role-based access controls
+Role-based access control
 
-Enhance UI/UX with modern frameworks
+UI improvements with modern frameworks
 
-Write comprehensive tests and validation
-
-License
-This repository is open source and free for educational use.
+Automated testing and input validation
