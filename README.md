@@ -153,13 +153,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Flask documentation and community
 - SQLite for lightweight database functionality
 - All contributors and supporters of this project
-
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_twitter) - your.email@example.com
-
-Project Link: [https://github.com/your-username/flask_user_auth](https://github.com/your-username/flask_user_auth)
-
 ---
 
 **Made with ❤️ for learning purposes**
